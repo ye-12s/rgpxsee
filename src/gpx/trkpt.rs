@@ -52,7 +52,6 @@ pub fn parse_track<R: BufRead>(reader: R) -> Result<Track, Error> {
     let mut buf = Vec::new();
     let mut segments: Vec<Segment> = Vec::new();
     let mut current_points: Vec<TrackPoint> = Vec::new();
-    // —— 表驱动 text handler（你已有）——
     let mut current_handler: Option<Applyfn> = None;
     let mut current_point: Option<TrackPoint> = None;
 
